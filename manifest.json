@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Developer.wordpress.org Theme",
+  "version": "0.1",
+  "description": "A simple theme for developer.wordpress.org",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://developer.wordpress.org/*"],
+      "css": ["assets/css/content-style.css"]
+    }
+  ],
+  "icons": {
+    "48" : "assets/img/chrome-48.png",
+    "128": "assets/img/chrome-128.png"
+  }
+}
