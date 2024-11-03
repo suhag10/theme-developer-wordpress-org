@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Developer.wordpress.org Theme",
+  "name": "Theme - developer.wordpress.org",
   "version": "0.1",
   "description": "A simple theme for developer.wordpress.org",
   "action": {
@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "matches": ["https://developer.wordpress.org/*"],
-      "css": ["assets/css/content-style.css"]
+      "css": ["assets/css/content.css"]
     }
   ],
   "icons": {
