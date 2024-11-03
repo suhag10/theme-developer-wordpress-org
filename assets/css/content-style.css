@@ -56,6 +56,9 @@ textarea {
     padding: 8px;
 }
 
+.has-white-color {
+    color: var(--text-color) !important;
+}
 /* ------------------------------------------------------ */
 /*  Header Style                                          */
 /* ------------------------------------------------------ */
