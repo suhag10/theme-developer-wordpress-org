@@ -4,8 +4,9 @@
 :root {
     --text-color: #adb5bd;
     --bg-color: #212529;
-    --primary: #00c684;
+    --primary: #00b377;
     --secondary: #ECEFF1;
+    --black: #000;
     --primary-rgb: 0, 198, 132;
     --color-beige: rgb(228, 228, 190);
     --border-color: #343a40;
@@ -25,7 +26,7 @@
     scrollbar-width: thin !important;
 }
 
-body, p, div{
+p.has-white-color, body, p {
     color: var(--text-color) !important;
 }
 
@@ -117,6 +118,10 @@ form[role*=search] input {
 .wp-block-search__input {
     height: 40px;
 }
+
+.wp-block-wporg-resource-select select {
+    background-color: var(--border-color) !important;
+}
 /* ------------------------------------------------------ */
 /*  Body Style                                            */
 /* ------------------------------------------------------ */
@@ -126,9 +131,14 @@ h1.wp-block-wporg-code-reference-title {
     padding: 10px;
 }
 
+.is-toc-heading:target {
+    --wp--preset--color--blueberry-1: #0d6efd;
+}
+
 .wp-block-syntaxhighlighter-code,
 .entry-content code:not(
     [class*=language-],
+    .wp-block-post-content code,
     .wporg-developer-code-block code,
     .wp-block-wporg-code-table .wp-block-table code
 ){
@@ -137,8 +147,14 @@ h1.wp-block-wporg-code-reference-title {
 }
 
 pre[class*=language-] code,
+.wp-block-post-content pre code,
 .wp-code-block-button-container code,
 .wp-code-block-button-container {
+    background: transparent !important;
+}
+
+.entry-content.wp-block-post-content pre code:not([class]), pre {
+    color: var(--black);
     background: transparent !important;
 }
 
@@ -171,6 +187,11 @@ table td {
 .wp-block-table.is-style-borderless thead tr,
 .wp-block-table.is-style-borderless tbody tr:nth-child(2n) {
     background-color: var(--table-borderless-bg) !important;
+}
+
+.entry-content code:not([class]),
+.wporg-has-embedded-code :not(.wp-block-code):not(.wp-code-block-button-container)>code {
+    background-color: var(--border-color) !important;
 }
 /* ------------------------------------------------------ */
 /*  Sidebar Style                                         */
